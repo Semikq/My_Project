@@ -1,13 +1,11 @@
 let display = document.getElementById("display");
 
-// Функция для добавления обработчика события к кнопкам
 function addButtonEventListener(className, value) {
     document.querySelector("." + className).addEventListener("click", function() {
-        display.innerHTML += value;
+        return display.innerHTML += value;
     });
 }
 
-// Добавление обработчиков событий для кнопок
 addButtonEventListener("buttonOne", "1");
 addButtonEventListener("buttonTwo", "2");
 addButtonEventListener("buttonThree", "3");
@@ -23,7 +21,6 @@ addButtonEventListener("buttonSub", "-");
 addButtonEventListener("buttonMull", "*");
 addButtonEventListener("buttonDilet", "/");
 
-// Функция для вычисления результата
 document.getElementById("equals").addEventListener("click", function() {
     try {
         let result = eval(display.innerHTML);
@@ -33,7 +30,6 @@ document.getElementById("equals").addEventListener("click", function() {
     }
 });
 
-// Функция для очистки дисплея
 document.getElementById("clear").addEventListener("click", function() {
-    display.innerHTML = "";
+    return display.innerHTML = "";
 });
