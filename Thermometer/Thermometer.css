@@ -1,0 +1,99 @@
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+#div{
+    width: 320px;
+    background-color:gray;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+#select{
+    margin: 10px;
+    width: 300px;
+    height: 25px;
+    background-color:aliceblue;
+    border-radius: 10px;
+}
+
+#divInput{
+    margin: 10px;
+}
+
+#input{
+    width: 127px;
+    height: 20px;
+    margin: 10px;
+    background-color:aliceblue;
+    border-radius: 10px;
+}
+
+p{
+    display: inline;
+}
+
+#inputResult{
+    width: 127px;
+    height: 20px;
+    margin: 10px;
+    background-color:aliceblue;
+    border-radius: 10px;
+}
+
+#divFormula{
+    margin: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+#formula{
+    background-color: gold;
+    font-size: 20px;
+    border-radius: 5px;
+}
