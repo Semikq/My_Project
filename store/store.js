@@ -5,13 +5,10 @@ const amount = document.getElementById("amount")
 const moneys = document.getElementById("money")
 const button = document.getElementById("button")
 
-let casa = 0
-let userMoney
-
 function reducer(state, { type, what, HowMany, money}) {
     if (!state) {
         return {
-            bear: {quantity: 100, cost: 6},
+            beer: {quantity: 100, cost: 6},
             chips: {quantity: 100, cost: 4},
             cola: {quantity: 100, cost: 3},
             salad: {quantity: 100, cost: 8}
@@ -35,19 +32,19 @@ function reducer(state, { type, what, HowMany, money}) {
     return state;
 }
 
-function createStore(reducer) {
+function Store(reducer) {
     let store = reducer(undefined, {})
-    const cbs = [];
+    let cbs = [];
 
-    const getState = () => store
-    const subscribe = cb => {
+    this.getState = () => store
+    this.subscribe = cb => {
         cbs.push(cb)
         return () => {
             cbs = cbs.filter(c => c !== cb)
         };
     };
 
-    const dispatch = action => {
+    this.dispatch = action => {
         const newStore = reducer(store, action)
         if (newStore !== store) {
             store = newStore
@@ -56,15 +53,12 @@ function createStore(reducer) {
             for (let cb of cbs) cb()
         }
     };
-
-    return {
-        getState,
-        dispatch,
-        subscribe
-    };
 }
 
-let store = createStore(reducer)
+let casa = 0
+let userMoney
+
+let store = new Store(reducer)
 
 function update(){
     goods.innerText = ""
