@@ -18,6 +18,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -39,51 +40,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-.basis{
-    margin: 10px;
-    width: 300px;
-    height: 400px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    background-color: gainsboro;
-    border-radius: 10px;
-    border: solid 1px black;
-}
-
-.disp{
-    width: 300px;
-    height: 50px;
-    background-color: grey;
-    border-radius: 10px;
-    font-size: 40px;
-    text-align: end;
-}
-
-#block{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 13px;
-}
-
-.buttonOne,.buttonTwo,.buttonThree,.buttonFour,.buttonFive,.buttonSix,.buttonSeven,.buttonEight,.buttonNine,.buttonZero,.buttonAdd,.buttonSub,.buttonMull,.buttonDilet,.buttonEquals,.buttonClear{
-    width: 65px;
-    height: 65px;
-    background-color: grey;
-    border-radius: 10px;
-    border: solid 1px black;
-    transition: 0.5s;
-    font-size: 35px;
-    text-align: center;
-}
-
-button:hover{
-    background-color: white;
-}
-
-button:active{
-    background-color: red;
 }

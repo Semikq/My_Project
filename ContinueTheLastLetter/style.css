@@ -1,0 +1,153 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#block{
+    background-color: #E8DCCC;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    transform: translateX(0%);
+    transition: all 1s ease;
+    border-radius: 30px;
+}
+
+#block.active{
+    transform: translateX(-35%);
+}
+
+#blockOne{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #373334;
+}
+
+#blockOne h2{
+    font-size: 26px;
+    text-align: center;
+    color: #373334;
+    border-right: solid 1px black;
+    width: 85%;
+}
+
+.ion--arrow-redo-outline {
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23373334' stroke-linejoin='round' stroke-width='32' d='M448 256L272 88v96C103.57 184 64 304.77 64 424c48.61-62.24 91.6-96 208-96v96Z'/%3E%3C/svg%3E");
+}
+
+#blockTwo{
+    height: 86%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#blockTwo p{
+    font-size: 25px;
+    color: #373334;
+}
+
+#EnterWord{
+    position: relative;
+}
+
+#EnterWord label{
+    position: absolute;
+    font-size: 25px;
+    left: 15px;
+    top: 10px;
+    transition: all 0.5s ease-in-out;
+    color: #373334;
+}
+
+#EnterWord input[type="text"]{
+    width: 95%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #373334;
+    text-align: center;
+    font-size: 24px;
+    color: #373334;
+    outline: none;
+}
+
+#EnterWord input[type="text"]:focus~label,
+#EnterWord input[type="text"]:valid~label{
+    top: -12px;
+    font-size: 18px;
+}
+
+#blockTwo input[type="button"]{
+    width: 60%;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: solid 1px #373334;
+    transition: all 0.2s ease-in-out;
+    background-color: #F3ECE4;
+}
+
+#blockTwo input[type="button"]:hover {
+    background-color: #373334;
+    color: #E8DCCC;
+}
+
+#rightWords{
+    background-color: #373334;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    transition: all 1s ease;
+    transform: translateX(0%);
+    border-radius: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+#rightWords.active{
+    transform: translateX(35%);
+}
+
+#left{
+    width: 30%;
+    height: 100%;
+}
+
+#right{
+    width: 70%;
+    height: 100%;
+    text-align: center;
+}
+
+#right h2{
+    font-size: 30px;
+    height: 15%;
+    align-content: center;
+    text-align: center;
+    color: #F3ECE4;
+}
+
+#right p{
+    font-size: 22px;
+    overflow-y: auto;
+    height: 85%;
+    padding: 0px 10px;
+    color: #E8DCCC;
+}

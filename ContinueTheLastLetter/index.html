@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue the last letter</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="block">
+        <div id="blockOne">
+            <h2>Continue the last letter</h2>
+            <span class="ion--arrow-redo-outline" id="openWords"></span>
+        </div>
+        <div id="blockTwo">
+            <p>Previous word</p>
+            <p id="htmlPreviousWord"></p>
+            <div id="EnterWord">
+                <input type="text" maxlength="20" id="enterWords" required>
+                <label for="EnterWords">Enter word</label>
+            </div>
+            <input type="button" value="Check the word" id="checkWord">
+            <input type="button" value="Restart game" id="restartGame">
+        </div>
+    </div>
+    <div id="rightWords">
+        <div id="left"></div>
+        <div id="right">
+            <h2>Words</h2>
+            <p id="listWords"></p>
+        </div>
+    </div>
+    <script src="javascript/index.js"></script>
+</body>
+</html>
