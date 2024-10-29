@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Draw on Grid</title>
-    <link rel="stylesheet" href="draw.css">
+    <title>Draw</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mainDiv">
+    <div id="draw" class="active">
+        <div id="topName">
+            <h2>Draw</h2>
+            <span class="arrowRedo" id="openSelectColor"></span>
+        </div>
+        <div id="fieldDraw"></div>
+    </div>
+    <div id="selectColor" class="active">
+        <div></div>
+        <div></div>
+    </div>
+    <!-- <div id="mainDiv">
         <div id="field"></div>
         <div id="tools">
             <div>
@@ -22,9 +34,9 @@
             <input type="button" id="green" value="green">
             <input type="button" id="blue" value="blue">
             <p>by Yaroslav</p>
-        </div>
+        </div> -->
     </div>
 
-<script src="draw.js"></script>
+<script src="javascript/index.js"></script>
 </body>
 </html>

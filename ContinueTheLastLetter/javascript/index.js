@@ -15,13 +15,18 @@ function randomOpeningWords() {
 }
 randomOpeningWords();
 openWords.addEventListener("click", function () {
+    console.log(openWords.classList.value);
     if (rightWords.classList.value) {
         rightWords.classList.remove("active");
         block.classList.remove("active");
+        openWords.classList.remove("ionArrowUndo");
+        openWords.classList.add("ionArrowRedo");
     }
     else {
         rightWords.classList.add("active");
         block.classList.add("active");
+        openWords.classList.remove("ionArrowRedo");
+        openWords.classList.add("ionArrowUndo");
     }
 });
 checkWord.addEventListener("click", function () {

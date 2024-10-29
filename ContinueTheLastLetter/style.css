@@ -1,11 +1,11 @@
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
-#block{
+#block {
     background-color: #E8DCCC;
     width: 350px;
     height: 350px;
@@ -15,20 +15,19 @@ body{
     border-radius: 30px;
 }
 
-#block.active{
+#block.active {
     transform: translateX(-35%);
 }
 
-#blockOne{
+#blockOne {
     height: 10%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #373334;
 }
 
-#blockOne h2{
+#blockOne h2 {
     font-size: 26px;
     text-align: center;
     color: #373334;
@@ -36,7 +35,7 @@ body{
     width: 85%;
 }
 
-.ion--arrow-redo-outline {
+.ionArrowRedo {
     display: inline-block;
     width: 15%;
     height: 30px;
@@ -45,7 +44,16 @@ body{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23373334' stroke-linejoin='round' stroke-width='32' d='M448 256L272 88v96C103.57 184 64 304.77 64 424c48.61-62.24 91.6-96 208-96v96Z'/%3E%3C/svg%3E");
 }
 
-#blockTwo{
+.ionArrowUndo {
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23373334' stroke-linejoin='round' stroke-width='32' d='M240 424v-96c116.4 0 159.39 33.76 208 96c0-119.23-39.57-240-208-240V88L64 256Z'/%3E%3C/svg%3E");
+}
+
+#blockTwo {
     height: 86%;
     width: 100%;
     text-align: center;
@@ -56,16 +64,16 @@ body{
     align-items: center;
 }
 
-#blockTwo p{
+#blockTwo p {
     font-size: 25px;
     color: #373334;
 }
 
-#EnterWord{
+#EnterWord {
     position: relative;
 }
 
-#EnterWord label{
+#EnterWord label {
     position: absolute;
     font-size: 25px;
     left: 15px;
@@ -74,7 +82,7 @@ body{
     color: #373334;
 }
 
-#EnterWord input[type="text"]{
+#EnterWord input[type="text"] {
     width: 95%;
     height: 40px;
     background-color: transparent;
@@ -87,12 +95,12 @@ body{
 }
 
 #EnterWord input[type="text"]:focus~label,
-#EnterWord input[type="text"]:valid~label{
+#EnterWord input[type="text"]:valid~label {
     top: -12px;
     font-size: 18px;
 }
 
-#blockTwo input[type="button"]{
+#blockTwo input[type="button"] {
     width: 60%;
     height: 35px;
     font-size: 18px;
@@ -107,7 +115,7 @@ body{
     color: #E8DCCC;
 }
 
-#rightWords{
+#rightWords {
     background-color: #373334;
     width: 350px;
     height: 350px;
@@ -121,22 +129,22 @@ body{
     flex-direction: row;
 }
 
-#rightWords.active{
+#rightWords.active {
     transform: translateX(35%);
 }
 
-#left{
+#left {
     width: 30%;
     height: 100%;
 }
 
-#right{
+#right {
     width: 70%;
     height: 100%;
     text-align: center;
 }
 
-#right h2{
+#right h2 {
     font-size: 30px;
     height: 15%;
     align-content: center;
@@ -144,7 +152,7 @@ body{
     color: #F3ECE4;
 }
 
-#right p{
+#right p {
     font-size: 22px;
     overflow-y: auto;
     height: 85%;
