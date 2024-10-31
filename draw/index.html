@@ -15,28 +15,37 @@
     </div>
     <div id="selectColor" class="active">
         <div></div>
-        <div></div>
-    </div>
-    <!-- <div id="mainDiv">
-        <div id="field"></div>
-        <div id="tools">
-            <div>
-                <input type="number" id="hei">
-                <input type="number" id="wid">
-                <input type="button" id="update" value="update">
+        <div id="settingsDraw">
+            <h1>Drawing settings</h1>
+            <div id="size">
+                <h2>Size field</h2>
+                <div>
+                    <input type="number" id="numColumns" value="22">
+                    <input type="number" id="numLines" value="22">
+                </div>
+                <input type="button" id="changeSizeField" value="Change">
             </div>
-            <input type="button" value="reset" id="reset">
-            <input type="button" value="eraser" id="eraser">
-            <input type="color" id="tableColor">
-            <input type="color" id="colors">
-            <input type="button" id="color" value="your color">
-            <input type="button" id="red" value="red">
-            <input type="button" id="green" value="green">
-            <input type="button" id="blue" value="blue">
-            <p>by Yaroslav</p>
-        </div> -->
+            <div id="color">
+                <h2>Color</h2>
+                <div>
+                    <input type="button" class="changeColors" style="background-color: red;" value="red">
+                    <input type="button" class="changeColors" style="background-color: blue;" value="blue">
+                    <input type="button" class="changeColors" style="background-color: green;" value="green"><br>
+                    <input type="text" class="changeColors" placeholder="Enter Hex, color or rgba">
+                    <input type="color" class="changeColors">
+                </div>
+            </div>
+            <div id="colorField">
+                <h2>Color field</h2>
+                <div>
+                    <input type="text" class="changeColorsField" placeholder="Enter Hex, color or rgba">
+                    <input type="color" class="changeColorsField">
+                </div> 
+                <input type="button" id="eraser" value="Eraser">
+            </div>
+            <input type="button" id="restartGame" value="Restart">
+        </div>
     </div>
-
 <script src="javascript/index.js"></script>
 </body>
 </html>

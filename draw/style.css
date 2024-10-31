@@ -23,7 +23,7 @@ body{
 
 #topName{
     height: 8%;
-    border-bottom: solid 1px #FFEFDF;
+    border-bottom: solid 2px #FFEFDF;
     display: flex;
     text-align: center;
     align-items: center;
@@ -41,7 +41,7 @@ body{
     display: inline-block;
     position: absolute;
     right: 0;
-    border-left: solid 1px #FFEFDF;
+    border-left: solid 2px #FFEFDF;
     width: 10%;
     height: 30px;
     background-repeat: no-repeat;
@@ -52,9 +52,16 @@ body{
 #fieldDraw{
     margin: 10px;
     flex-grow: 1;
-    border-radius: 20px;
     border: solid 2px #FFEFDF;
 }
+
+#fieldDraw table{
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    user-select: none;
+}
+
 
 
 #selectColor{
@@ -78,7 +85,178 @@ body{
     width: 40%;
 }
 
-#selectColor div:nth-child(2){
+#settingsDraw{
     height: 100%;
-    flex-grow: 1;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#settingsDraw h1{
+    font-size: 28px;
+    height: 8%;
+    width: 100%;
+    color: #123346;
+    align-content: center;
+    text-align: center;
+    border-bottom: solid 2px #123346;
+}
+
+
+#size{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
+    width: 100%;
+    color: #123346;
+    border-bottom: solid 2px #123346;
+}
+
+#size h2{
+    font-size: 24px;
+}
+
+#size div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#size input[type="number"]{
+    height: 22px;
+    width: 65px;
+    border-radius: 25px;
+    border: solid 2px #FF9A0A;
+    background-color: #FFEFDF;
+    color: #123346;
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+#size input[type="button"]{
+    height: 28px;
+    width: 85px;
+    border-radius: 25px;
+    border: solid 2px #123346;
+    background-color: #FF9A0A;
+    font-size: 16px;
+    color: #123346;
+    transition: all 0.4s ease-in-out;
+}
+
+#size input[type="button"]:hover{
+    border: solid 2px #FF9A0A;
+    background-color: #123346;
+    color: #FF9A0A;
+}
+
+
+#color{
+    height: 25%;
+    width: 100%;
+    border-bottom: solid 2px #123346;
+    color: #123346;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#color h2{
+    font-size: 24px;
+}
+
+#color input[type="button"]{
+    width: 60px;
+    height: 25px;
+    margin-bottom: 5px;
+    border: solid 2px #123346;
+    border-radius: 25px;
+}
+
+#color input:nth-child(5){
+    height: 20px;
+    width: 150px;
+    border-radius: 25px;
+    border: solid 2px #123346;
+    background-color: #FFEFDF;
+    color: #123346;
+    text-align: center;
+}
+
+#color input:nth-child(6){
+    position: relative;
+    top: 2px;
+    height: 26px;
+    border: solid 2px #123346;
+    border-radius: 25px;
+    background-color: #FFEFDF;
+}
+
+#colorField{
+    height: 25%;
+    width: 100%;
+    border-bottom: solid 2px #123346;
+    color: #123346;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#colorField h2{
+    font-size: 24px;
+}
+
+#colorField div input:nth-child(1){
+    height: 20px;
+    width: 150px;
+    border-radius: 25px;
+    border: solid 2px #123346;
+    background-color: #FFEFDF;
+    color: #123346;
+    text-align: center;
+}
+
+#colorField div input:nth-child(2){
+    position: relative;
+    top: 2px;
+    height: 26px;
+    border: solid 2px #123346;
+    border-radius: 25px;
+    background-color: #FFEFDF;
+}
+
+#colorField input[type="button"]{
+    height: 28px;
+    width: 150px;
+    border-radius: 25px;
+    border: solid 2px #123346;
+    background-color: #FF9A0A;
+    font-size: 16px;
+    color: #123346;
+    transition: all 0.4s ease-in-out;
+}
+
+#colorField input[type="button"]:hover{
+    border: solid 2px #FF9A0A;
+    background-color: #123346;
+    color: #FF9A0A;
+}
+
+#restartGame {
+    height: 28px;
+    width: 150px;
+    border-radius: 25px;
+    border: solid 2px #123346;
+    background-color: #FF9A0A;
+    font-size: 16px;
+    color: #123346;
+    transition: all 0.4s ease-in-out;
+    margin: auto;
 }
