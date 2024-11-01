@@ -1,11 +1,11 @@
-body{
+body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#draw{
+#draw {
     width: 500px;
     height: 500px;
     background-color: #123346;
@@ -14,30 +14,30 @@ body{
     display: flex;
     flex-direction: column;
     z-index: 1;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0%);
 }
 
-#draw.active{
+#draw.active {
     transform: translateX(-30%);
 }
 
-#topName{
+#draw div:nth-child(1) {
     height: 8%;
     border-bottom: solid 2px #FFEFDF;
     display: flex;
     text-align: center;
     align-items: center;
-    position: relative;
     user-select: none;
 }
 
-#topName h2{
+#draw div:nth-child(1) h2 {
     font-size: 28px;
     width: 100%;
     color: #FFEFDF;
 }
 
-#topName .arrowRedo {
+.arrowRedo {
     display: inline-block;
     position: absolute;
     right: 0;
@@ -46,54 +46,63 @@ body{
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23FFEFDF' d='M48 399.26C48 335.19 62.44 284 90.91 247c34.38-44.67 88.68-68.77 161.56-71.75V72L464 252L252.47 432V329.35c-44.25 1.19-77.66 7.58-104.27 19.84c-28.75 13.25-49.6 33.05-72.08 58.7L48 440Z'/%3E%3C/svg%3E");
-  }
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23FFEFDF' d='M58.79 439.13A16 16 0 0 1 48 424c0-73.1 14.68-131.56 43.65-173.77c35-51 90.21-78.46 164.35-81.87V88a16 16 0 0 1 27.05-11.57l176 168a16 16 0 0 1 0 23.14l-176 168A16 16 0 0 1 256 424v-79.77c-45 1.36-79 8.65-106.07 22.64c-29.25 15.12-50.46 37.71-73.32 67a16 16 0 0 1-17.82 5.28Z'/%3E%3C/svg%3E");
+}
 
-#fieldDraw{
+.ionArrow {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    border-left: solid 2px #FFEFDF;
+    width: 10%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23FFEFDF' d='M448 440a16 16 0 0 1-12.61-6.15c-22.86-29.27-44.07-51.86-73.32-67C335 352.88 301 345.59 256 344.23V424a16 16 0 0 1-27 11.57l-176-168a16 16 0 0 1 0-23.14l176-168A16 16 0 0 1 256 88v80.36c74.14 3.41 129.38 30.91 164.35 81.87C449.32 292.44 464 350.9 464 424a16 16 0 0 1-16 16'/%3E%3C/svg%3E");
+}
+
+#fieldDraw {
     margin: 10px;
     flex-grow: 1;
     border: solid 2px #FFEFDF;
 }
 
-#fieldDraw table{
+#fieldDraw table {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
     user-select: none;
 }
 
-
-
-#selectColor{
+#selectColor {
     width: 500px;
     height: 500px;
     position: absolute;
-    border-radius: 25PX;
+    border-radius: 25px;
     background-color: #5E8081;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.5s ease-in-out;
     border: solid 2px #123346;
     display: flex;
-    flex-direction: row;
+    transform: translateX(0%);
 }
 
-#selectColor.active{
+#selectColor.active {
     transform: translateX(30%);
 }
 
-#selectColor div:nth-child(1){
+#selectColor div:nth-child(1) {
     height: 100%;
     width: 40%;
 }
 
-#settingsDraw{
+#settingsDraw {
     height: 100%;
     width: 60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-#settingsDraw h1{
+#settingsDraw h1 {
     font-size: 28px;
     height: 8%;
     width: 100%;
@@ -103,8 +112,7 @@ body{
     border-bottom: solid 2px #123346;
 }
 
-
-#size{
+#size {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,48 +121,47 @@ body{
     width: 100%;
     color: #123346;
     border-bottom: solid 2px #123346;
-}
-
-#size h2{
     font-size: 24px;
 }
 
-#size div{
+#size div {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-#size input[type="number"]{
+#size input {
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    color: #123346;
+    outline: none;
+}
+
+#size div input {
     height: 22px;
     width: 65px;
-    border-radius: 25px;
     border: solid 2px #FF9A0A;
     background-color: #FFEFDF;
-    color: #123346;
     font-size: 15px;
     padding-left: 8px;
 }
 
-#size input[type="button"]{
+#size input[type="button"] {
     height: 28px;
     width: 85px;
-    border-radius: 25px;
     border: solid 2px #123346;
     background-color: #FF9A0A;
     font-size: 16px;
-    color: #123346;
-    transition: all 0.4s ease-in-out;
 }
 
-#size input[type="button"]:hover{
+#size div input:focus,
+#size input:hover {
     border: solid 2px #FF9A0A;
     background-color: #123346;
     color: #FF9A0A;
 }
 
-
-#color{
+#color {
     height: 25%;
     width: 100%;
     border-bottom: solid 2px #123346;
@@ -163,41 +170,43 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    text-align: center;
-}
-
-#color h2{
     font-size: 24px;
 }
 
-#color input[type="button"]{
+#color input {
+    border: solid 2px #123346;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+    background-color: #FFEFDF;
+}
+
+#color input:focus,
+#color input:hover {
+    border: solid 2px #FF9A0A;
+    background-color: #123346;
+    color: #FF9A0A;
+}
+
+#color input[type="button"] {
     width: 60px;
     height: 25px;
     margin-bottom: 5px;
-    border: solid 2px #123346;
-    border-radius: 25px;
 }
 
-#color input:nth-child(5){
+#color input[type="text"] {
     height: 20px;
     width: 150px;
-    border-radius: 25px;
-    border: solid 2px #123346;
-    background-color: #FFEFDF;
-    color: #123346;
     text-align: center;
 }
 
-#color input:nth-child(6){
+#color input[type="color"] {
     position: relative;
     top: 2px;
     height: 26px;
-    border: solid 2px #123346;
-    border-radius: 25px;
-    background-color: #FFEFDF;
 }
 
-#colorField{
+#colorField {
     height: 25%;
     width: 100%;
     border-bottom: solid 2px #123346;
@@ -206,33 +215,30 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    text-align: center;
-}
-
-#colorField h2{
     font-size: 24px;
 }
 
-#colorField div input:nth-child(1){
+#colorField div input {
+    border: solid 2px #123346;
+    background-color: #FFEFDF;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+#colorField div input:nth-child(1) {
     height: 20px;
     width: 150px;
     border-radius: 25px;
-    border: solid 2px #123346;
-    background-color: #FFEFDF;
-    color: #123346;
     text-align: center;
 }
 
-#colorField div input:nth-child(2){
+#colorField div input:nth-child(2) {
     position: relative;
     top: 2px;
     height: 26px;
-    border: solid 2px #123346;
-    border-radius: 25px;
-    background-color: #FFEFDF;
 }
 
-#colorField input[type="button"]{
+#colorField input[type="button"] {
     height: 28px;
     width: 150px;
     border-radius: 25px;
@@ -240,10 +246,11 @@ body{
     background-color: #FF9A0A;
     font-size: 16px;
     color: #123346;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-#colorField input[type="button"]:hover{
+#colorField input:focus,
+#colorField input:hover {
     border: solid 2px #FF9A0A;
     background-color: #123346;
     color: #FF9A0A;
@@ -257,6 +264,12 @@ body{
     background-color: #FF9A0A;
     font-size: 16px;
     color: #123346;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
     margin: auto;
+}
+
+#restartGame:hover {
+    border: solid 2px #FF9A0A;
+    background-color: #123346;
+    color: #FF9A0A;
 }
