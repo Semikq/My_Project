@@ -10,6 +10,7 @@ const newAnswer = document.getElementById("newAnswer") as HTMLInputElement
 const addQuestion = document.getElementById("addQuestion") as HTMLInputElement
 const checkResult = document.getElementById("checkResult") as HTMLInputElement
 const score = document.getElementById("score") as HTMLParagraphElement
+const skipRiddle = document.getElementById("skipRiddle") as HTMLInputElement
 
 const objQuestion: {[key: string]: string | number} = {
     "What color is the water?": "blue",
@@ -40,7 +41,6 @@ successfulAnswers.addEventListener("click", function(): void{
 addQuestion.addEventListener("click", function(): void{
     if(newQuestion.value && newAnswer.value){
         objQuestion[newQuestion.value] = newAnswer.value
-        // console.log(objQuestion)
     }
 })
 
@@ -51,7 +51,15 @@ checkResult.addEventListener("click", function (): void {
             score.innerText = String(Number(score.innerText) + 1)
             hint.value = ""
             startGame(objQuestion)
-            console.log(objQuestion)
         }
+    }
+})
+
+skipRiddle.addEventListener("click", function(): void{
+    if(question.innerText){
+        delete objQuestion[question.innerText]
+        hint.value = ""
+        startGame(objQuestion)
+        console.log(objQuestion)
     }
 })
