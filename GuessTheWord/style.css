@@ -65,6 +65,7 @@ body{
     width: 38px;
     height: 32px;
     align-content: center;
+    text-align: center;
     border-right: solid 2px #373334;
 }
 
@@ -99,6 +100,7 @@ body{
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 20px;
+    text-align: center;
 }
 
 #blockOne div:nth-child(2) > input{
@@ -109,6 +111,7 @@ body{
     font-size: 20px;
     border-radius: 15px;
     transition: all 0.4s ease-in-out;
+    text-align: center;
 }
 
 #blockOne > span{
@@ -182,7 +185,6 @@ body{
     font-size: 18px;
 }
 
-
 #blockTwo div:nth-child(2) div input[type="text"]{
     width: 95%;
     padding-left: 10px;
@@ -193,8 +195,8 @@ body{
     width: 75%;
 }
 
-#blockTwo div:nth-child(2) div input:hover,
-#blockTwo div:nth-child(2) div input:focus{
+#blockTwo div:nth-child(2) div input[type="button"]:hover,
+#blockTwo div:nth-child(2) div input[type="text"]:focus{
     color: #F3ECE4;
     background-color: #373334;
     border: solid 2px #F3ECE4;
@@ -206,5 +208,21 @@ body{
 }
 
 #blockThree div:nth-child(2){
-    /* background-color: #E8DCCC; */
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start; 
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 22px;
+    overflow: auto;
 }
+
+#listSuccessfulAnswers p {
+    margin-right: 5px;
+    margin-bottom: 5px; 
+}
+
+#listSuccessfulAnswers p {
+    display: inline;
+    margin-right: 5px;
+  }

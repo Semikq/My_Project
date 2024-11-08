@@ -16,7 +16,7 @@
         </div>
         <div>
             <p id="question"></p>
-            <input id="hint"></input>
+            <input id="hint" maxlength="15"></input>
             <input type="button" id="checkResult" value="Check result">
             <input type="button" id="skipRiddle" value="Skip the riddle">
         </div>
@@ -27,17 +27,17 @@
         <div>
             <h1>Create a new question</h1>
             <div>
-                <p>Question: 100</p>
+                <p id="howManyQuestions"></p>
                 <input type="text" id="newQuestion" placeholder="Please, enter question">
                 <input type="text" id="newAnswer" placeholder="Please, enter the answer">
                 <input type="button" id="addQuestion" value="Add question">
-                <input type="button" value="Restart">
+                <input type="button" value="Restart" id="restart">
             </div>
         </div>
     </div>
     <div id="blockThree" class="block">
         <div></div>
-        <div></div>
+        <div id="listSuccessfulAnswers"></div>
     </div>
     <script src="javascript/index.js"></script>
 </body>
